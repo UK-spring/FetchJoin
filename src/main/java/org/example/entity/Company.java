@@ -30,7 +30,4 @@ public class Company {
         return name;
     }
 
-    public List<Tutor> getTutors() {
-        return tutors;
-    }
 }
