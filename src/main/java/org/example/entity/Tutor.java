@@ -12,7 +12,7 @@ public class Tutor {
 
     private String name;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "company_id")
     private Company company;
 
@@ -29,5 +29,9 @@ public class Tutor {
 
     public String getName() {
         return name;
+    }
+
+    public void setCompany(Company company) {
+        this.company = company;
     }
 }
