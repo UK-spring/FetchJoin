@@ -13,7 +13,7 @@ public class Tutor {
     private String name;
 
     @ManyToOne
-    @JoinColumn(name = "company_id", insertable = false, updatable = false)
+    @JoinColumn(name = "company_id")
     private Company company;
 
     public Tutor() {

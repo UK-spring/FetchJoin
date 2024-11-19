@@ -15,10 +15,6 @@ public class Company {
 
     private String name;
 
-    @OneToMany
-    @JoinColumn(name = "company_id")
-    private List<Tutor> tutors = new ArrayList<>();
-
     public Company() {
     }
 
