@@ -1,6 +1,7 @@
 package org.example.entity;
 
 import jakarta.persistence.*;
+import org.hibernate.annotations.BatchSize;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,6 +16,7 @@ public class Company {
 
     private String name;
 
+//    @BatchSize(size = 100)
     @OneToMany(mappedBy = "company")
     private List<Tutor> tutorList = new ArrayList<>();
 
