@@ -15,6 +15,9 @@ public class Company {
 
     private String name;
 
+    @OneToMany(mappedBy = "company")
+    private List<Tutor> tutorList = new ArrayList<>();
+
     public Company() {
     }
 
@@ -28,6 +31,10 @@ public class Company {
 
     public String getName() {
         return name;
+    }
+
+    public List<Tutor> getTutorList() {
+        return tutorList;
     }
 
 }
